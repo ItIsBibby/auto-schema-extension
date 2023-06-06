@@ -2,7 +2,7 @@
 A chrome extension I made to auto-fill a Grading Schema form in BlackBoard. I built this to make inputting grading schemas quicker and more accurate at a time when my team was required to update grading schemas en masse, and we would have otherwise had to enter them all manually.
 
 ## How it works
-It works on the schema creation page in Blackboard by targeting specific input elements, and filling them out with information from the objects defined in function.js, which are based on the grading schemas used at Sheffield Hallam University.
+It works on the schema creation page in Blackboard by targeting specific input elements, and filling them out with information from the objects defined in action.js, which are based on the grading schemas used at Sheffield Hallam University.
 Users can choose to convert student marks between three options: percentage, point, and category.
 
 ## Setup
