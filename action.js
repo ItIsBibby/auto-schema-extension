@@ -239,7 +239,7 @@ let foundationSportsAndSocial = {
 };
 
 let foundationSportsAndSocial_PercentageCategory = new Schema(
-    `Sports and Social Care Foundation Grade Percentage/Category Conversion`,
+    `Sports and Social Care Foundation Percentage/Category Conversion`,
     `This schema converts indicative mark range (percentage) to equivalent category for Sports and Social Care Foundation Level. (Added for the 2022/23 academic year).`,
     foundationSportsAndSocial.perc,
     foundationSportsAndSocial.cat
@@ -253,7 +253,7 @@ let foundationEngineeringAndMaths = {
 };
 
 let foundationEngineeringAndMaths_PercentageCategory = new Schema(
-    `Engineering and Maths Foundation Grade Percentage/Category Conversion`,
+    `Engineering and Maths Foundation Percentage/Category Conversion`,
     `This schema converts indicative mark range (percentage) to equivalent category for Engineering and Maths Foundation Level. (Added for the 2022/23 academic year).`,
     foundationEngineeringAndMaths.perc,
     foundationEngineeringAndMaths.cat
