@@ -1,9 +1,9 @@
 function fill(schema) {
     if (window.location.href.indexOf("ultra") > -1) {
-        if (document.querySelector('[aria-label="Edit Schema Name"]')) {
-            document.querySelector('[aria-label="Edit Schema Name"]').click();
+        if (document.querySelector('[aria-label="Edit Grading Schema Name"]')) {
+            document.querySelector('[aria-label="Edit Grading Schema Name"]').click();
         };
-        document.querySelector('[data-analytics-id="course.grades.settings.schema.add.title.input"]').click();
+        document.querySelector('[data-analytics-id="course.grades.settings.schema.edit.title.button"]').click();
         document.querySelector('[data-analytics-id="course.grades.settings.schema.add.title.input"]').value = schema.name;
         document.querySelector('[data-analytics-id="course.grades.settings.schema.add.title.input"]').dispatchEvent(new InputEvent('input', {bubbles:true}));
         document.querySelector('[data-analytics-id="course.grades.settings.schema.add.title.input"]').click();
@@ -19,11 +19,13 @@ function fill(schema) {
         if(document.querySelector('[aria-label="Schema Mapping"]').children[1].rows[0].querySelector('[aria-label="Grade Name"')) {
             document.querySelector('[aria-label="Schema Mapping"]').children[1].rows[0].querySelector('[aria-label="Grade Name"').click();
         };
-        document.getElementById(`upper-bound-field-0`).value = "100";
-        document.getElementById(`upper-bound-field-0`).dispatchEvent(new InputEvent('input', {bubbles:true}));
 
         for (let i = 0; i < schema.from[0].length; i++) {
-            document.querySelector('[aria-label="Schema Mapping"]').children[1].rows[i].querySelector('[aria-label="Grade Name"').click();
+            document.querySelector('[aria-label="Schema Mapping"]').children[1].rows[i].children[0].children[0].children[0].children[0].click();
+            if(document.getElementById(`upper-bound-field-0`)) {
+                document.getElementById(`upper-bound-field-0`).value = "100";
+                document.getElementById(`upper-bound-field-0`).dispatchEvent(new InputEvent('input', {bubbles:true}));
+            };
             document.getElementById(`grade-symbol-text-field-${i}`).value = schema.to[1][i];
             document.getElementById(`grade-symbol-text-field-${i}`).dispatchEvent(new InputEvent('input', {bubbles:true}));
             document.getElementById(`lower-bound-field-${i}`).value = schema.from[0][i];
